@@ -1,0 +1,486 @@
+#body-row {
+    margin-left:0;
+    margin-right:0;
+}
+
+#sidebar-container {
+    min-height: 100vh;   
+    background-color: #18385c;
+    padding: 0;
+}
+
+/* Sidebar sizes when expanded and expanded */
+.sidebar-expanded {
+    width: 230px;
+}
+.sidebar-collapsed {
+    width: 60px;
+}
+
+/* Menu item*/
+#sidebar-container .list-group a {
+    background: transparent !important;
+    border: 0px;
+    padding-right: 0;
+}
+
+#sidebar-container .list-group a > div{    
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px 0 10px 5px;
+    overflow: hidden;
+}
+
+a.menu:hover > div, a.menu.active > div {
+    background: #fff !important;
+    color: #18385c !important;
+}
+
+span.badge.badge-pil {
+    background: #fff;
+    color: #18385c;
+    border-radius: 100%;
+}
+
+.menu:hover  span.badge.badge-pil, .menu.active  span.badge.badge-pil {
+    
+    background: #18385c;
+    color: #fff;
+}
+
+
+
+#body-col {
+    background-color: #fff;
+}
+.collapse-icon {
+    font-size: 1.5em;
+}
+
+/* top nav */
+
+nav.navbar {
+    margin-left: -15px;
+    margin-right: -15px;
+    border-bottom: 1px solid #18385c;
+    background: #fff !important;
+    box-shadow: 0px 10px 10px #18385c54;
+}
+.navbar-light .navbar-brand {
+    color: rgb(24 56 92);
+    font-weight: bold;
+}
+
+
+.navbar-nav {
+    align-items: center;
+}
+
+.left-side-menu li.nav-item.dropdown {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 0 10px;
+    height: 28px;
+}
+
+a.nav-link.text-primary {
+    align-items: center;
+    font-style: italic;
+    display: flex;
+}
+span.appoint-badge {
+    width: 10px;
+    height: 10px;
+    background: #007bff;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+
+.left-side-menu li.nav-item.dropdown a{
+    padding-top: 0;
+    padding-bottom: 0;
+    color:#18385c;
+}
+
+.notification i.fa.fa-bell {
+    font-size: 24px;
+    color: gray;
+}
+.notification:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 100%;
+    position:absolute;
+}
+span.user-img img {
+    width: 36px;
+}
+.rightside-menu li.nav-item {
+    margin: 0 10px;
+}
+
+/* content */
+
+div#cy {
+    margin: 15px auto;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-title {
+    color: #d5d4d4;
+    text-align: center;
+    margin: 25px auto 15px;
+}
+
+/* stepper */
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset .form-card {
+    background: white;
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+    position: relative
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
+}
+
+
+#msform .action-button {
+    background: #7dc96a;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 30px;
+    margin: 10px 5px
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    opacity: .7;
+}
+
+#msform .action-button-previous {
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 10px 5px
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid #0090ff
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    content: "1"
+}
+
+#progressbar #personal:before {
+    content: "2"
+}
+
+#progressbar #payment:before {
+    content: "3"
+}
+
+#progressbar #confirm:before {
+    content: "4"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #0090ff
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+labe.label {
+    color: #106b76;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    flex-direction: column;
+    display: flex;
+}
+
+.form-group input {
+    float: left;
+    border-radius: 9px;
+}
+
+th.datepicker-switch {
+    font-size: 10px;
+    color: #106b76;
+}
+
+div#datepicker1 {
+    display: flex;
+    justify-content: center;
+}
+
+th.dow {
+    background: #e9e9f0;
+    padding: 5px 8px;
+    border-radius: 0 !important;
+    font-size: 10px;
+}
+.datepicker table tr td.new, .datepicker table tr td.old {
+    color: #999;
+    border: 1px solid lightgray;
+    padding: 5px 5px;
+    font-size: 10px;
+}
+td.day {
+    color: #000 !important;
+    font-size: 10px;
+    padding: 5px 5px;
+    border: 1px solid lightgray !important;
+}
+td.active.day {
+    background-image: none !important;
+    background-color: #0090ff !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+}
+
+label.chk-lbl {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+    background: #0090ff;
+    color:#fff
+}
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+h3.sidebar-heading {
+    margin: 15px auto;
+    border-bottom: 1px solid;
+    width: 100%;
+    text-align: center;
+    color: #18385c;
+}
+
+.show-hide-list {
+    border-bottom: 1px solid;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+.show-hide-list i {
+    border: 1px solid;
+    padding: 0 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+
+.card-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card-box .card {
+    border: 1px solid lightgray;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6px;
+}
+span.card-avatar {
+    background: #1079a2;
+    color: #fff;
+    border-radius: 100%;
+    width: 28px;
+    height: 27px;
+    text-align: center;
+}
+
+span.patient-detail {
+    display: flex;
+    flex-direction: column;
+}
+span.card-name {
+    font-size: 10px;
+}
+span.tags {
+    font-size: 8px;
+}
+span.left-sched {
+    border-right: 1px solid lightgray;
+    margin-right: 3px;
+    font-size: 12px;
+}
+span.right-shed {
+    font-size: 12px;
+}
+
+.card-detail {
+    font-size: 11px;
+    padding-left: 58px;
+    padding-bottom: 20px;
+}
+.card-detail:before {
+    font-family: "Font Awesome 5 Brand";
+    content: "\f5481";
+    position: absolute;
+    left: 25px;
+    font-size: 30px;
+    color: #1079a2;
+}
+
+.card-name i {
+    margin-right: 5px;
+}

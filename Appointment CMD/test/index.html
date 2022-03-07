@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous" />
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- datepicker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+        integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+    <title>Test</title>
+</head>
+
+<body>
+    <!-- Bootstrap row -->
+    <div class="row" id="body-row">
+        <!-- Sidebar -->
+        <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
+            <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+            <!-- Bootstrap List Group -->
+            <ul class="list-group">
+                <!-- Menu with submenu -->
+                <a href="#" data-toggle="sidebar-colapse" class="bg-light list-group-item list-group-item-action d-flex align-items-center pr-0">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <span id="collapse-text" class="menu-collapsed">Connect my doc</span>
+                        <span class="fas fa-align-right collapse-icon ml-3"></span>
+                    </div>
+                </a>
+                <a href="../../Dashboard/template/cmd1.html" class="bg-light menu list-group-item active list-group-item-action">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fad fa-chart-bar fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Dashboard</span>
+                        <span class="badge badge-pil ml-3">1</span>
+                    </div>
+                </a>
+                <a href="../../patients-cmd/Tamplates/patienthtml.html" class="bg-light menu list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fas fa-user-alt fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Patients</span>
+                        <span class="badge  badge-pil ml-3">2</span>
+                    </div>
+                </a>
+                <a href="../../Chat/chatscetion/Template/chat.html" class="bg-light menu list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-cog fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Chat room</span>
+                    </div>
+                </a>
+                <a href="#" class="bg-light menu list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-question fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Setting</span>
+                    </div>
+                </a>
+
+            </ul><!-- List Group END-->
+        </div><!-- sidebar-container END -->
+
+        <!-- MAIN -->
+        <div class="col bg-light" id="body-col">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Book Appointment / Consultations</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto left-side-menu">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fa fa-map-marker-alt"></i>
+                                St. Marry Clinic
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fa fa-stethoscope"></i>
+                                Dr. Derek
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="#">
+                                <span class="appoint-badge"></span>
+                                New Appointment
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav my-2 my-lg-0 rightside-menu">
+                        <li class="nav-item">
+                            <a class="nav-link notification" href="#">
+                                <i class="fa fa-bell"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown user-profile">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Dr Derek
+                                <i class="fa fa-angle-down"></i>
+                                <span class="user-img"><img src="https://www.shareicon.net/data/128x128/2017/01/06/868320_people_512x512.png"
+                                        loading="lazy" /></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            </div>
+                        </li>
+                        </form>
+                </div>
+            </nav>
+            <div id="cy">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <h2 class="card-title">
+                                Select a Patient to Book Appointment / Consultation
+                            </h2>
+                            <div class="card-body">
+                                <!-- MultiStep Form -->
+                                <div class="container-fluid" id="grad1">
+                                    <div class="row justify-content-center mt-0">
+                                        <div class="col-12 text-center p-0 mb-2">
+                                            <div class="card px-0 pt-4 pb-0 mb-3">
+                                                <div class="row">
+                                                    <div class="col-md-12 mx-0">
+                                                        <form id="msform">
+                                                            <!-- progressbar -->
+                                                            <ul id="progressbar">
+                                                                <li class="active" id="account"><strong>Name</strong>
+                                                                </li>
+                                                                <li id="personal"><strong> PatientIssue</strong></li>
+                                                                <li id="payment"><strong>Date and time</strong></li>
+                                                                <li id="confirm"><strong>Confirm appointment</strong>
+                                                                </li>
+                                                            </ul> <!-- fieldsets -->
+                                                            <fieldset>
+                                                                <div class="form-card">
+                                                                    <div class="form-group col-4">
+                                                                        <labe class="label">Patient</labe>
+                                                                        <input type="text" id="patient-id" list="patient" required />
+                                                                        <datalist id="patient">
+
+                                                                        </datalist>
+                                                                    </div>
+
+                                                                </div>
+                                                                <input type="button" name="next" id="step-1-submit" class="next action-button" value="Confirm" />
+                                                            </fieldset>
+                                                            <fieldset>
+                                                                <div class="form-card">
+                                                                    <div class="form-card">
+                                                                        <div class="form-group col-4">
+                                                                            <labe class="label">Patient's Issue</labe>
+                                                                            <input type="text" id="patient-issue" list="patient-issue-list" required />
+                                                                            <datalist id="patient-issue-list">
+                                                                                <option>Head injuary</option>
+                                                                                <option>Fracture</option>
+                                                                            </datalist>
+                                                                            <br />
+                                                                            <input type="text" id="patient-reasone" placeholder="or enter reason for visit" required />
+                                                                        </div>
+                                                                        <div class="col-md-8">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div><input type="button" name="next" id="step-2-submit"
+                                                                    class="next action-button" value="Next Step" />
+                                                            </fieldset>
+                                                            <fieldset>
+                                                                <div class="form-card row">
+                                                                    <div class="form-group col-4">
+                                                                        <div id="datepicker" data-date="25/01/2022">
+                                                                        </div>
+                                                                        <input type="hidden" id="my_hidden_input">
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_1" value="11:00" name="cb_name">
+                                                                                <label for="cb_1" class="chk-lbl">
+                                                                                    11:00
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_2" value="11:30" name="cb_name">
+                                                                                <label for="cb_2" class="chk-lbl">
+                                                                                    11:30
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_3" value="13:00" name="cb_name">
+                                                                                <label for="cb_3" class="chk-lbl">
+                                                                                    13:00
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_4" value="13:30" name="cb_name">
+                                                                                <label for="cb_4" class="chk-lbl">
+                                                                                    13:30
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_5" value="14:00" name="cb_name">
+                                                                                <label for="cb_5" class="chk-lbl">
+                                                                                    14:00
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_6" value="cb_val" name="cb_name">
+                                                                                <label for="cb_6" class="chk-lbl">
+                                                                                    14:30
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_7" value="15:00" name="cb_name">
+                                                                                <label for="cb_7" class="chk-lbl">
+                                                                                    15:00
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_8" value="15:30" name="cb_name">
+                                                                                <label for="cb_8" class="chk-lbl">
+                                                                                    15:30
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_9" value="16:00" name="cb_name">
+                                                                                <label for="cb_9" class="chk-lbl">
+                                                                                    16:00
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_10" value="16:30" name="cb_name">
+                                                                                <label for="cb_10" class="chk-lbl">
+                                                                                    16:30
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_11" value="17:00" name="cb_name">
+                                                                                <label for="cb_11" class="chk-lbl">
+                                                                                    17:00
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" checked id="cb_12" value="17:30" name="cb_name">
+                                                                                <label for="cb_12" class="chk-lbl">
+                                                                                    17:30
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_13" value="18:00" name="cb_name">
+                                                                                <label for="cb_13" class="chk-lbl">
+                                                                                    18:00
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_14" value="18:30" name="cb_name">
+                                                                                <label for="cb_14" class="chk-lbl">
+                                                                                    18:30
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_15" value="19:00" name="cb_name">
+                                                                                <label for="cb_15" class="chk-lbl">
+                                                                                    19:00
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_16" value="19:30" name="cb_name">
+                                                                                <label for="cb_16" class="chk-lbl">
+                                                                                    19:30
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_17" value="20:00" name="cb_name">
+                                                                                <label for="cb_17" class="chk-lbl">
+                                                                                    20:00
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <input type="checkbox" id="cb_18" value="20:30" name="cb_name">
+                                                                                <label for="cb_18" class="chk-lbl">
+                                                                                    20:30
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> <input type="button" name="previous" class="previous action-button-previous"
+                                                                    value="Previous" /> <input type="button" id="step-3-submit"
+                                                                    name="make_payment" class="next action-button" value="Confirm"
+                                                                />
+
+
+                                                            </fieldset>
+                                                            <fieldset>
+                                                                <div class="form-card">
+                                                                    <h2 class="fs-title text-center">Success !</h2>
+                                                                    <br><br>
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png"
+                                                                                loading="lazy" class="fit-image"> </div>
+                                                                    </div> <br><br>
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-7 text-center">
+                                                                            <h5>You Have Successfully Signed Up</h5>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <h3 class="sidebar-heading">
+                                Your Schedules
+                            </h3>
+                            <div id="datepicker1" data-date="12/03/2012"></div>
+                            <div class="show-hide-list">
+                                <i class="fa fa-angle-up show-card"></i>
+                            </div>
+                            <div class="card-box" id="appointmentData">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Main Col END -->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous">
+            </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+            </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdn.lr-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
+            <script>window.LogRocket && window.LogRocket.init('zensar/test7');</script>
+        <script src="function.js"></script>
+</body>
+
+</html>

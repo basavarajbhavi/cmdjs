@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <!-- Font awesome cdn -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="#">
+  <title>ChatPart</title>
+  
+  <style>
+    @media screen and (max-width: 480px) {
+      .container {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+
+      .chatc {
+        width: 350px;
+        height: 100px;
+
+      }
+    }
+
+    .has-search .form-control {
+      padding-left: 2.375rem;
+      border: none;
+
+    }
+
+
+    .has-search .form-control-feedback {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      width: 2.375rem;
+      height: 2.375rem;
+      line-height: 2.375rem;
+      text-align: center;
+      pointer-events: none;
+      color: #aaa;
+    }
+
+    #sidebar-container {
+
+      background-color: #18385c;
+      padding: 0;
+     
+    }
+
+    #sidebar-container .list-group a {
+      background: transparent !important;
+      border: 0px;
+      padding-right: 0;
+    }
+
+    #sidebar-container .list-group a>div {
+      color: #fff;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding: 5px 0 5px 5px;
+      overflow: hidden;
+    }
+
+    a.menu:hover>div,
+    a.menu.active>div {
+      background: #fff !important;
+      color: #18385c !important;
+    }
+
+    span.badge.badge-pil {
+      background: #fff;
+      color: #18385c;
+      border-radius: 100%;
+    }
+
+    .menu:hover span.badge.badge-pil,
+    .menu.active span.badge.badge-pil {
+
+      background: #18385c;
+      color: #fff;
+    }
+
+    @media screen and (min-width: 768px) {
+
+      #sidebar-container {
+        width: 45px;
+
+
+      }
+
+      .list-group-item {
+
+        padding: 0.5rem 0.3rem;
+
+      }
+    }
+
+    #hey {
+      border: 1px solid black;
+      border-radius: 30px;
+      background-color: #2D2E6A;
+      margin-top: 20px;
+      width: 150px;
+      height: 50px;
+      color: white;
+    }
+
+    #hey{
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    #hello {
+      /*float: right;*/
+      border: 1px solid lightgrey;
+      border-radius: 30px;
+      background-color: white;
+      width: 150px;
+      height: 50px;
+      color: #59596B;
+      float: right;
+      text-align: center;
+      margin-top: 10%;
+      margin-left: 78%;
+    }
+
+    #hello{
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .audio {
+      border: none;
+      border-radius: 30px;
+      /*background-color:white;*/
+      width: 50px;
+      height: 50px;
+      /*color: #59596B;*/
+      /* margin-left: 78%; */
+    }
+    #audiocontrol{
+      width:230px;
+      float: right;
+      margin-top: 10px;
+    }
+
+    /*.audio2 {
+      width: 50px;
+      float: right;
+    }
+
+    #vedio {
+      width: 50px;
+    }*/
+
+    #msg {
+     
+      border-radius: 30px;
+      margin-top: 45%;
+      height: 50px;
+      width: 90%;
+      padding-left: 20px;
+    }
+    /* #txtmsg{
+      position: absolute;
+      top: 50%;
+      right:50%; 
+    } */
+    #chatContainer{
+      max-height: 600px;
+      
+    }
+    @media screen and (min-width: 320px){
+      #sidebar-container{
+        position: fixed;
+        height: 10%;
+        z-index: 1;
+      } 
+      #lazyload{
+        position: fixed;
+        margin-top: 15%;
+        background-color: #fff;
+      }
+      #doctor{
+        margin-top: 40%;
+      }
+         #msg{
+         width: 60%;
+         /* margin-top: 130%; */
+         /* margin-top: 20%; */
+         padding-left: 5px;
+        }
+        #hello{
+         margin-left: 40%;
+       }
+       #id2{
+         width: 45px;
+         padding-left: 3px;
+       }
+       #id12{
+         padding-left: 2px;
+       }
+       #id5{
+        padding-left: 2px; 
+       }
+       #id51{
+         width: 30px;
+       }
+       .card{
+         height: 100%;
+       }
+      }
+      @media screen and (min-width: 425px)
+      {
+        #sidebar-container{
+        position: fixed;
+        height: 10%;
+        z-index: 1;
+      } 
+      #lazyload{
+        position: fixed;
+        margin-top: 12%;
+        width: 80%;
+      }
+      #doctor{
+        margin-top: 25%;
+       
+      }
+      /* #row1{
+        padding-left: 10%;
+      }
+      .card{
+        margin-top: 15%;
+      } */
+      }
+      @media screen and (min-width: 768px)
+      {
+        #sidebar-container{
+        position: fixed;
+        height: 100%;
+        z-index: 1;
+      } 
+      #lazyload{
+        position: fixed;
+        margin-top: 0%;
+        margin-left: 4%;
+        width: 85%;
+        z-index: 1;
+      }
+      #doctor{
+        margin-top: 15%;
+        padding-left: 10%;
+      }
+      #search{
+        padding-left: 10%;
+      }
+      #row1{
+        padding-left: 10%;
+      }
+      .card{
+        margin-top: 15%;
+        height: 90%;
+      }
+      }
+     @media screen and (max-width: 800px){
+
+       #hello{
+         margin-left: 50%;
+       }
+       #row1{
+         overflow: auto;
+         max-height: 450px;
+       }
+       #msg{
+         width: 60%;
+         /* margin-top: 240%; */
+         margin-top: 70%;
+         padding-left: 5px;
+
+       }
+     }
+     @media screen and (min-width: 800px){
+     #sidebar-container{
+        position: fixed;
+        height: 95%;
+        z-index: 1;
+      } 
+      #lazyload{
+        position: fixed;
+        margin-top: 0%;
+        width: 85%;
+      } 
+      #doctor{
+        margin-top: 20%;
+        padding-left: 10%;
+      }
+      .card{
+        margin-top: 8%;
+        height: 90%;
+      }
+       #hello{
+         margin-left: 50%;
+       }
+       #row1{
+         overflow: auto;
+         max-height: 550px;
+       }
+        
+       #msg{
+         width: 80%;
+         /* margin-top: 120%; */
+       
+         padding-left: 5px;
+
+       }
+     }
+      
+      @media screen and (min-width: 1440px){
+        #sidebar-container{
+        position: fixed;
+        height: 77%;
+        z-index: 1;
+      } 
+      #lazyload{
+        position: fixed;
+        margin-top: 0%;
+        width: 85%;
+      } 
+      .card{
+        margin-top: 7%;
+        height: 90%;
+      }
+        #hello{
+         margin-left: 80%;
+       }
+       #msg{
+         width: 80%;
+         /* margin-top: 75%; */
+         /* margin-top: 40%; */
+         padding-left: 5px;
+        }
+      }
+
+     #lazyload{
+      background-color: white;
+      transition: background-color 1s, border 1s;
+     }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- side bar -->
+
+      <div id="sidebar-container" class="col-12 col-sm-12 col-md-1 col-lg-1 ">
+        <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+        <!-- Bootstrap List Group -->
+        <ul class="list-group">
+          <!-- Menu with submenu -->
+          <div class="row">
+            <div class="col">
+              <a href="#" data-toggle="sidebar-colapse"
+                class="bg-light list-group-item list-group-item-action d-flex align-items-center pr-0">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <!-- <span id="collapse-text" class="menu-collapsed">Connect My doc</span> -->
+                  <span class="fas fa-align-right collapse-icon "></span>
+                </div>
+              </a>
+            </div>
+            <div class="col" id="id12">
+              <a href="../../../Dashboard/template/cmd1.html" class="bg-light menu list-group-item  list-group-item-action">
+                <div id="id2" class="d-flex w-100 justify-content-start align-items-center">
+                  <span><i class="fad fa-chart-bar "></i></span>
+
+                  <!-- <span class="menu-collapsed">Dashboard</span> -->
+                  <span class="badge badge-pil ">1</span>
+                </div>
+              </a>
+            </div>
+            <div class="col" id="id12">
+
+              <a href="../../../patients-cmd/Tamplates/patienthtml.html" class="bg-light menu list-group-item  list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fas fa-user-alt  "></span>
+                  <!-- <span class="menu-collapsed">Patients</span> -->
+                  <span class="badge  badge-pil ">2</span>
+                </div>
+              </a>
+            </div>
+            <div class="col" >
+              <a href="../../../Chat/chatscetion/Template/chat.html" class="bg-light active menu list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fad fa-comments-alt  "></span>
+                  <!-- <span class="menu-collapsed">Chat room</span> -->
+                </div>
+              </a>
+            </div>
+            <div class="col" id="id5">
+              <a href="#" class="bg-light menu list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span id="id51" class="fas fa-cog  fa-fw"></span>
+                  <!-- <span class="menu-collapsed">Setting</span> -->
+                </div>
+              </a>
+            </div>
+          </div>
+        </ul><!-- List Group END-->
+      </div><!-- sidebar-container END -->
+
+      <div class="col-12 col-sm-12 col-md-11 col-lg-11">
+        <!-- navigation bar -->
+      
+        <ul class="nav p-2 nav-tabs two d-flex justify-content-end" id="lazyload">
+          <li class="nav-item">
+            <a href="#" class="nav-link disabled ">Logout</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn p-0 position-relative" style=" margin: 7px;">
+              <i style="font-size: large;" class="fas fa-bell"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </button>
+          </li>
+
+
+          <li class="nav-item dropdown" id="doc">
+            <a style="color: rgb(71, 67, 67); font-size:10px;" class="nav-link dropdown-toggle light"
+              data-bs-toggle="dropdown" href="#" role="button" id="navdoc" aria-expanded="false">John Doe</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#"> <img  id="navimg" style="width: 25px; height: 25px; border-radius: 50%;" src="" alt="..."></a>
+          </li>
+
+        </ul>
+     
+
+        <div class="row">
+          <!-- chat section -->
+
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-2">
+
+            <div class="row" id="doctor">
+              <!--<div class="col-3">
+
+                <img class="img1"
+                  src="data:image/jpeg;base64,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"
+                  style="height: 50px;width: 50px;border-radius: 50%;display: inline-block;">
+
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <span style="font-weight:bold; color:#344B39 ; opacity: 0.5; font-size:18px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Dr.John
+                    Joe </span>
+                </div>
+                <div class="row">
+                  <span  style="font-size:10px; color:#344B39 ; font-family: italic;"> 
+                    <div class="dropdown">
+                      <span style="font-size:11px;" class="btn  dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" >
+                        Available
+                      </span>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div> </span>
+                </div>
+
+
+              </div>
+              <div class="col-2">
+                <i class="fas fa-comment-alt-lines" style="color: #31344B ; padding-top:5px;"></i>
+              </div>
+
+              <div class="col-2">
+                <i class="fas fa-ellipsis-v" style="color: #31344B ; padding-top:5px;"></i>
+              </div>
+              <hr style="margin: 0px; width:100%">-->
+
+            </div>
+
+
+            <!-- Actual search box -->
+            <div class=" form-group has-search" id="search" >
+              <!--<hr  style="width:100%;text-align:left;margin-left:0">-->
+              <span class="fa fa-search form-control-feedback"></span>
+              <input type="text" id="myFilter" onkeyup="myFunction()" class="form-control" placeholder="Search for chat/ session">
+              <hr style="width:100%;margin: 0%;">
+            </div>
+
+            <!--1st-->
+
+            <!--<div class="row">
+              <div class="col-3">
+
+                <img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg"
+                  style="height: 50px;width: 50px;border-radius: 50%;display: inline-block;">
+
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <span style="font-weight:bold; color:#344B39 ; font-size:18px; font-family: Times New Roman;"> SAM
+                    Watson </span>
+                </div>
+                <div class="row">
+                  <span style="font-size:12px; color:#344B39 ; font-family: italic;"> Last seen at 21:35 </span>
+                </div>
+
+
+              </div>
+              <div class="col-1">
+                <i class="fas fa-phone-alt" style="color: #31344B ;"></i>
+              </div>
+              <div class="col-1">
+                <i class="fas fa-video" style="color: #31344B ;"></i>
+              </div>
+
+              <div class="col-1">
+                <i class="fas fa-ellipsis-v" style="color: #31344B ;"></i>
+              </div>
+              <hr style="margin-top: 3px; width:100%">
+
+            </div>-->
+
+
+            <!--2ND  -->
+
+            <div class="row" id="row1">
+              <audio id="myAudio">
+                <source src="../assets/button.mp3" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+              <!--<div class="col-3">
+
+                <img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg"
+                  style="height: 50px;width: 50px;border-radius: 50%;display: inline-block;">
+
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <span style="font-weight:bold; color:#344B39 ; font-size:18px; font-family: Times New Roman;"> SAM
+                    Watson </span>
+                </div>
+                <div class="row">
+                  <span style="font-size:12px; color:#344B39 ; font-family: italic;"> Last seen at 21:35 </span>
+                </div>
+
+
+              </div>
+              <div class="col-1">
+                <i class="fas fa-phone-alt" style="color: #31344B ;"></i>
+              </div>
+              <div class="col-1">
+                <i class="fas fa-video" style="color: #31344B ;"></i>
+              </div>
+
+              <div class="col-1">
+                <i class="fas fa-ellipsis-v" style="color: #31344B ;"></i>
+              </div>
+              <hr style="margin-top: 3px; width:100%">-->
+
+            </div>
+
+            <!--3RD-->
+
+            <!--
+            <div class="row">
+              <div class="col-3">
+
+                <img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg"
+                  style="height: 50px;width: 50px;border-radius: 50%;display: inline-block;">
+
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <span style="font-weight:bold; color:#344B39 ; font-size:18px; font-family: Times New Roman;"> SAM
+                    Watson </span>
+                </div>
+                <div class="row">
+                  <span style="font-size:12px; color:#344B39 ; font-family: italic;"> Last seen at 21:35 </span>
+                </div>
+
+
+              </div>
+              <div class="col-1">
+                <i class="fas fa-phone-alt" style="color: #31344B ;"></i>
+              </div>
+              <div class="col-1">
+                <i class="fas fa-video" style="color: #31344B ;"></i>
+              </div>
+
+              <div class="col-1">
+                <i class="fas fa-ellipsis-v" style="color: #31344B ;"></i>
+              </div>
+              <hr style="margin-top: 3px; width:100%">
+
+            </div>-->
+
+            <!--4TH-->
+
+
+            <!--<div class="row">
+              <div class="col-3">
+
+                <img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg"
+                  style="height: 50px;width: 50px;border-radius: 50%;display: inline-block;">
+
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <span style="font-weight:bold; color:#344B39 ; font-size:18px; font-family: Times New Roman;"> SAM
+                    Watson </span>
+                </div>
+                <div class="row">
+                  <span style="font-size:12px; color:#344B39 ; font-family: italic;"> Last seen at 21:35 </span>
+                </div>
+
+
+              </div>
+              <div class="col-1">
+                <i class="fas fa-phone-alt" style="color: #31344B ;"></i>
+              </div>
+              <div class="col-1">
+                <i class="fas fa-video" style="color: #31344B ;"></i>
+              </div>
+
+              <div class="col-1">
+                <i class="fas fa-ellipsis-v" style="color: #31344B ;"></i>
+              </div>
+              <hr style="margin-top: 3px; width:100%">
+
+            </div>
+-->
+
+            <!--5TH  -->
+            <!--<div class="row">
+              <div class="col-3">
+
+                <img class="img1"
+                  src="https://image.shutterstock.com/image-photo/handsome-unshaven-young-darkskinned-male-260nw-640011838.jpg"
+                  style="height: 50px;width: 50px;border-radius: 50%;display: inline-block;">
+
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <span style="font-weight:bold; color:#344B39 ; font-size:18px; font-family: Times New Roman;"> Group
+                    Victoria </span>
+                </div>
+                <div class="row">
+                  <span style="font-size:12px; color:#344B39 ; font-family: italic;"> Last seen at 21:35 </span>
+                </div>
+
+
+              </div>-->
+            <!--<div class="col-1">
+                          <i class="fas fa-phone-alt" style="color: #31344B ;"></i>
+                         </div>
+                           <div class="col-1">
+                           <i class="fas fa-video" style="color: #31344B ;"></i>
+                         </div>-->
+
+            <!--<div class="col-1">
+                <i class="fas fa-ellipsis-v" style="color: #31344B ;"></i>
+              </div>
+              <hr style="margin-top: 3px; width:100%">
+
+            </div>-->
+
+
+            <!--6TH-->
+
+            <!--<div class="row">
+              <div class="col-3">
+
+                <img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg"
+                  style="height: 50px;width: 50px;border-radius: 50%;display: inline-block;">
+
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <span style="font-weight:bold; color:#344B39 ; font-size:18px; font-family: Times New Roman;"> SAM
+                    Watson </span>
+                </div>
+                <div class="row">
+                  <span style="font-size:12px; color:#344B39 ; font-family: italic;"> Last seen at 21:35 </span>
+                </div>
+
+
+              </div>
+              <div class="col-1">
+                <i class="fas fa-phone-alt" style="color: #31344B ;"></i>
+              </div>
+              <div class="col-1">
+                <i class="fas fa-video" style="color: #31344B ;"></i>
+              </div>
+
+              <div class="col-1">
+                <i class="fas fa-ellipsis-v" style="color: #31344B ;"></i>
+              </div>
+              <hr style="margin-top: 3px; width:100%">
+
+            </div>-->
+
+            <!--7th-->
+
+            <!--<div class="row">
+              <div class="col-3">
+
+                <img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg"
+                  style="height: 50px;width: 50px;border-radius: 50%;display: inline-block;">
+
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <span style="font-weight:bold; color:#344B39 ; font-size:18px; font-family: Times New Roman;"> SAM
+                    Watson </span>
+                </div>
+                <div class="row">
+                  <span style="font-size:12px; color:#344B39 ; font-family: italic;"> Last seen at 21:35 </span>
+                </div>
+
+
+              </div>
+              <div class="col-1">
+                <i class="fas fa-phone-alt" style="color: #31344B ;"></i>
+              </div>
+              <div class="col-1">
+                <i class="fas fa-video" style="color: #31344B ;"></i>
+              </div>
+
+              <div class="col-1">
+                <i class="fas fa-ellipsis-v" style="color: #31344B ;"></i>
+              </div>
+              <hr style="margin-top: 3px; width:100%">
+
+            </div>-->
+
+
+
+          </div>
+
+
+
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-8 mt-2 " style="background: rgb(231, 231, 245);">
+            <!-- chat conversation -->
+
+            <div class="card">
+
+              <div class="card-body">
+
+                <div id="chatContainer" class="image">
+                  <img class="chatc" src="../assets/img.jpg" alt="chat coversation" style="max-width:100%;height:auto;">
+                </div>
+
+              </div>
+            </div>
+
+          
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous ">
+    </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    
+  <script src="../javascript/chat.js" async></script>
+</body>
+
+</html>

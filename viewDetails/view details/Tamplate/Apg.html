@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap cdn  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="../styles/apg.css" rel="stylesheet">
+    <title>viewDetailsScreen</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- side bar  -->
+            <!-- side bar -->
+
+            <div id="sidebar-container" class="col-12 col-sm-12 col-md-12 col-lg-2 ">
+                <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+                <!-- Bootstrap List Group -->
+                <ul class="list-group">
+                    <!-- Menu with submenu -->
+                    <a href="#" data-toggle="sidebar-colapse"
+                        class="bg-light list-group-item list-group-item-action d-flex align-items-center pr-0">
+                        <div class="d-flex w-100 justify-content-between align-items-center">
+                            <span id="collapse-text" class="menu-collapsed">Connect My doc</span>
+                            <span class="fas fa-align-right collapse-icon ml-3"></span>
+                        </div>
+                    </a>
+                    <a href="../../../Dashboard/template/cmd1.html"
+                        class="bg-light menu list-group-item active list-group-item-action">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span class="fad fa-chart-bar fa-fw mr-3"></span>
+                            <span class="menu-collapsed">Dashboard</span>
+                            <span class="badge badge-pil ml-3">1</span>
+                        </div>
+                    </a>
+                    <a href="../../../patients-cmd/Tamplates/patienthtml.html" class="bg-light menu list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span class="fas fa-user-alt fa-fw mr-3"></span>
+                            <span class="menu-collapsed">Patients</span>
+                            <span class="badge  badge-pil ml-3">2</span>
+                        </div>
+                    </a>
+                    <a href="../../../Chat/chatscetion/Template/chat.html" class="bg-light menu list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span class="fad fa-comments-alt fa-fw mr-3"></span>
+                            <span class="menu-collapsed">Chat room</span>
+                        </div>
+                    </a>
+                    <a href="#" class="bg-light menu list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span class="fa fa-cog fa-fw mr-3"></span>
+                            <span class="menu-collapsed">Setting</span>
+                        </div>
+                    </a>
+
+                </ul>
+                <!-- List Group END-->
+            </div>
+            <!-- sidebar-container END -->
+
+            <div class=" col-12 col-sm-12 col-md-12 col-lg-10 " style="padding-left: 2px;padding-right: 2px;">
+                <!-- nav bar  -->
+
+                <!-- for example -->
+
+                 <nav class="navbar navbar-expand-lg navbar-light" style="box-shadow: 5px 10px #f5f4f4; padding-left: 2px;padding-right: 2px;">
+                    <div class="container-fluid" style="margin-left: 0px;margin-right: 0px; padding-left: 0px;padding-right: 0px;">
+                    <span class="navbar-brand" href="#" style="color:darkblue;font-weight: bolder;">Appointments</span>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText1" aria-controls="navbarText1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText1">
+                    <ul id="getNav" class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item dropdown" style="border:2px groove rgb(248, 242, 242); border-radius: 8px;height: 35px;width:60%;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: rgb(6, 42, 53);font-size:13px;text-align: center;">
+                    <i class="fa fa-map-marker-alt"></i>
+                    St. Marry Clinic
+                    </a>
+                    </li>
+
+
+                    <li class="nav-item dropdown" style="border:2px groove rgb(245, 245, 245); border-radius: 8px;height: 35px;width:60%; margin-left:3px;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: rgb(6, 42, 53);font-size:13px;text-align: center;">
+                    <i class="fa fa-stethoscope"></i>
+                    Dr. Derek Williams
+                    </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link text-primary" href="#">
+                        <span class="appoint-badge"></span>
+                        New Appointment
+                        </a>
+                        </li> -->
+                    </ul> 
+                    <!-- <ul class="navbar-nav my-2 my-lg-0 rightside-menu">
+                        <li class="nav-item">
+                        <a class="nav-link notification" href="#">
+                        <i class="fa fa-bell"></i>
+                        </a>
+                        </li> -->
+                     <span class="navbar-text">
+                    <i class="far fa-bell"></i> <select style="border:none;"><option id="doctor"></option></select> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHCM-DWPX_OQUxMi-XMLXcmVTIzOMtEGHbQE-iJo4XSGZCjb5gd_7ILIAKuYKOxtr5t7g&usqp=CAU" style="width: 30px;height: 30px;" class="card-img-top" alt="...">
+                    </span> 
+                    </div>
+                    </div>
+                    </nav>
+
+                <br> 
+
+                
+
+                <!-- main body  -->
+
+                <div style="background-color: rgb(226, 231, 236); padding-left: 2px;padding-right: 2px; " class="container-fluid rounded ">
+                    <div class="row">
+                        <div class="col mb-2">
+                            <!-- <button type="button" style="float: right; background-color: rgb(52, 52, 82);" class="btn btn-primary "></button> -->
+                            <!-- Button trigger modal -->
+                            <button type="button" style="float: right; background-color: rgb(52, 52, 82);"
+                                class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+                                onclick="playSound()">
+                                Close Appointment
+                            </button>
+                            <audio id="myAudio">
+
+                                <source src=".//alaram.mp3" type="audio/wav" /> Your browser does not support the audio
+                                element.
+
+                            </audio>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title" style=" color: rgb(52, 52, 82);"
+                                                id="exampleModalLongTitle">Are you sure you want to close the
+                                                Appointment?
+                                            </h6>
+
+                                        </div>
+                                        <div class="modal-body">
+                                           
+                                            you won't be able to change the prescriptions and tests recommended once you close the appointment .Make sure you check them once before you confirm
+                                            
+                                                                                    </div>
+                                        <div class="modal-footer">
+
+
+                                            <button type="button" id="third" class="btn btn-secondary"
+                                                aria-placeholder="confirm" data-dismiss="modal">
+                                                confirm
+                                            </button>
+
+
+                                            <button type="button" id="fourth" class="btn btn-primary">cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row ">
+
+                        <div id="getpatientcard" class="col-12 col-sm-12 col-md-6 col-lg-6 ">
+
+                            <!-- <div style="height: 170px;" class="card m-1  p-1">
+                        
+                            <div id="rahul" class="row ">
+                                <div class="col-3 ">
+                                    <img src="men1.jfif" style="width: 50px; height: 50px; border-radius: 50%;" class="card-img-top "
+                                        alt="... ">
+                                </div>
+                                <div class="col-9 ">
+                                    <ul class="list-group ">
+                                        <span style="font-size: 11px; opacity: 0.6;">Patient</span>
+                                        <span class="peter">Peter Thanos</span>
+                                        <span>Male,Age 26</span>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col border-end ">
+                                    <p>
+                                        <i style="opacity: 0.6;" class="fas fa-phone-alt "><span
+                                                style="color:rgb(39, 39, 97) ; font-size: 12px;">940876484</span>
+                                        </i>
+                                    </p>
+                                    <p>
+                                        <i style="opacity: 0.6;" class="fas fa-envelope ">
+                                            <span style="color:rgb(39, 39, 97) ; font-size: 12px;">exa@gmail.com</span>
+                                        </i>
+                                    </p>
+                        
+                                </div>
+                                <div class="col ">
+                                    <p>
+                                        <i style="opacity: 0.6;" class="far fa-calendar-alt ">
+                                            <span style="color:rgb(39, 39, 97) ; font-size: 12px;">22 sep 1999</span>
+                                        </i>
+                                    </p>
+                        
+                                    <p>
+                                        <i style="opacity: 0.6;" class="fas fa-tint ">
+                                            <span style="color:rgb(39, 39, 97) ; font-size: 12px;">o+ve</span>
+                                        </i>
+                                    </p>
+                        
+                        
+                                </div>
+                            </div>
+                        
+                        </div> -->
+                        </div>
+                        <!-- 2nd column  -->
+                        <div id="getdoctorcard" class="col-12 col-sm-12 col-md-6 col-lg-6 ">
+                            <!-- <div style="height: 170px;" class="card p-1 m-1">
+                                <div class="row ">
+                                    <div class="col-3 ">
+                                        <img src="men3.jfif" style="width: 50px; height: 50px; border-radius: 50%;"  class="card-img-top " alt="... ">
+                                    </div>
+                                    <div class="col-9 ">
+                                        <ul class="list-group ">
+                                            <span style="font-size: 11px; opacity: 0.6;">Doctor</span>
+                                            <span style="color:rgb(39, 39, 97) ; font-size: 14px;">Dr.Sammy
+                                                Winchester</span>
+                                            <span style="color:rgb(39, 39, 97) ; font-size: 14px;">Cardiologist</span>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="row ">
+                                    <div class="col border-end">
+                                        <p> <i style="opacity: 0.6;" class="fas fa-phone-alt ">
+                                                <span style="color:rgb(39, 39, 97) ; font-size: 12px;">9440838163</span>
+                                            </i></p>
+                                        <p><i style="opacity: 0.6;" class="fas fa-envelope ">
+                                                <span
+                                                    style="color:rgb(39, 39, 97) ; font-size: 12px;">exa@gmail.com</span>
+                                            </i></p>
+
+                                    </div>
+
+                                    <div class="col ">
+                                        <ul class="list-group ">
+                                            <span style="font-size: 10px; opacity: 0.6;">NP|NO</span>
+                                            <span style="color:rgb(39, 39, 97) ; font-size: 12px;">9440838163</span>
+                                            <span style="font-size: 10px; opacity: 0.6;">Practice Loction</span>
+                                            <span style="color:rgb(39, 39, 97) ; font-size: 12px;">Cardiologist</span>
+                                        </ul>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div> -->
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+
+                    <!-- main body 2nd part  -->
+
+                    <div class="row ">
+                        <div class="col ">
+                            <div  id="inner"  class="card ">
+
+                                <div  class="card-body ">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                                            <h5 class="Comment ">Comment</h5>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-9 col-lg-9">
+
+                                            <button type="button" style=" background-color: rgb(52, 52, 83);"
+                                                class="btn btn-primary btn-sm ">Save</button>
+                                        </div>
+                                    </div>
+
+
+                                    <p id="getcomm" class="card-text ">
+                                    </p>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3rd part -->
+                    <br></br>
+
+                    <div class="row ">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                            <div style="margin-bottom: 10px; height: 197px;" class="card  ">
+                                <div style="color: rgb(75, 75, 122);box-shadow:2px soild rgb(75, 75, 122) ;  "
+                                    class="card-title p-1">
+                                    <b> Recomendation</b>
+                                </div>
+                                <div class="row d-flex justify-content-between ">
+                                    <div class="col-md-5">
+                                        <div style="color: rgb(70, 70, 109);">
+                                            <b>Search</b>
+                                        </div>
+                                        <div style="padding: 5px;" class="card">
+                                            <label class="label"></label>
+                                            <!-- <input type="text" id="patient-issue" list="patient-issue-list" required /> -->
+                                            <select id="patient-issue-list" onclick="getDoctor()">
+                                                
+                                            </select>
+
+                                            <!-- <ul class="list-group "> -->
+                                            <!-- <div class="vl "></div>
+                                                <span style="font-size: 13px;">Doctor</span>
+                                                <span style="font-size: 13px;">Dr.Sammy Winchester</span>
+                                                <span style="font-size: 13px;">Cardiologist</span>
+                                            </ul> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        
+                                            
+                                        <div id="searchdoctorname1" style="width: 200px;height: 25px; border:1px solid black "> 
+                                             
+                                        </div>
+                                        <!-- <div class="btn-group">
+                                            <input
+                                                style="height: 30px; font-size: small; border-radius: 15px; width: fit-content;"
+                                                id="searchdoctorname1"  type="search"class="form-control" >
+
+                                        </div>
+                                         -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 ">
+                            <div class="card p-1">
+                                <div class="row m-3">
+                                    <div class="col-4">
+                                        <div style="color: rgb(70, 70, 109);">
+                                            <b> Vitals</b>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="button" style=" background-color: rgb(55, 55, 83);"
+                                            class="btn btn-primary btn-sm ">Save</button>
+                                    </div>
+                                </div>
+                                <!-- symbols  -->
+                                <div id="vitals" style="text-align: center; margin-bottom: 8.5px;" class="row">
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- 4th part prescription ,tests -->
+
+                    <div class="row " style="margin-top: 30px;">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                            <div style="margin-bottom: 10px; height: 472px;" class="card">
+                                <div class="d-flex justify-content-between">
+                                    <div class="c">
+                                        <h4 style="color:  rgb(75, 75, 122); margin-left: 15px; padding-top: 5px;">
+                                            Prescription</h4>
+                                    </div>
+                                    <!-- <button style="color: white; background-color: rgb(47, 47, 114);" class="c mt-1 me-4">
+                                            +
+                                    </button> -->
+                                    <button type="button" class="btn  c mt-1 me-4" style="background-color: #18385c;color: #fff;font-weight: bolder;" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@mdo"
+                                        onClick="playSound()">+</button>
+                                    <audio id="myAudio">
+
+                                        <source src="./alaram1.mp3" type="audio/wav" /> Your browser does not support
+                                        the audio element.
+
+                                    </audio>
+
+                                    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content " style="width: 75%;">
+                                                <div class="" style="text-align: center;">
+                                                    <h5 class="modal-title " id="exampleModalLabel">4th priscription
+                                                        Details</h5>
+
+                                                </div>
+                                                <hr>
+                                                <div class="modal-body ">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="recipient-name"
+                                                                class="col-form-label opacity-75">Search for
+                                                                Medicine:</label>
+                                                            <hr style="color: #18385c; margin: 0px; padding: 0px;">
+                                                            <input type="text" class="form-control border-0"
+                                                                style="font-size: 10px;opacity: 0.7;"
+                                                                placeholder="Eg Tablate Viks" id="recipient-name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="message-text"
+                                                                class="col-form-label opacity-75">Medicine
+                                                                Duration:</label>
+                                                            <hr style="color: #18385c; margin: 0px; padding: 0px;">
+                                                            <input type="text" class="form-control border-0"
+                                                                style="font-size: 10px;opacity: 0.7;"
+                                                                placeholder="Eg Days" id="recipient-name1">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <label for="message-text"
+                                                                        class="col-form-label opacity-75">Medicine
+                                                                        Cycle:</label>
+                                                                    <hr
+                                                                        style="color: #18385c; margin: 0px; padding: 0px; width: 50%;">
+                                                                    <input type="text" class="form-control border-0 "
+                                                                        style="font-size: 10px;opacity: 0.7;"
+                                                                        placeholder="Eg M-A-N,M-O-N,O-A-N"
+                                                                        id="recipient-name2">
+                                                                </div>
+                                                                
+                                                                    
+                                                                    <div  class="col-6">
+                                                                        <label for="message-text"
+                                                                        class="col-form-label opacity-75">
+                                                                        Food:</label>
+                                                                        <div class="row d-flex-end">
+                                                                            
+                                                                            <div class="col"><span style="font-size: 13px;">After</span></div>
+                                                                            <div class="col">
+                                                                                <div class="form-check form-switch">
+                                                                                    <input class="form-check-input switch-input"  type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                                    <!-- <label class="form-check-label" for="flexSwitchCheckDefault">D</label> -->
+                                                                                    <span class="switch-label" data-on="After" data-off="Beffore"></span>
+                                                                                </div>
+                                                                           
+                                                                            </div>
+                                                                            <div class="col">
+                                                                                <span style="font-size: 13px;" class="lever">Before</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                        
+                                                                      </div>
+
+
+                                                                
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="message-text"
+                                                                class="col-form-label opacity-75">Medicine Description
+                                                                for Patient:</label>
+                                                            <hr style="color: #18385c; margin: 0px; padding: 0px;">
+                                                            <input type="text" class="form-control border-0"
+                                                                style="font-size: 10px;opacity: 0.7;"
+                                                                placeholder="Eg Dont use hot water consume Tablate"
+                                                                id="recipient-name3">
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <button type="button" id="addPrescription"
+                                                    class="btn btn-lg btn-secondary" style="background-color: #18385c;" data-dismiss="modal">Add
+                                                    Medicine</button>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            
+                                <!-- first pricscription -->
+                                <div id="addPrescriptionDetails">
+                                    <!-- <div class="card p-2 m-2">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <ol type="1">
+                                                    <li>Paracitmal</li>
+                                                    <p style="opacity: 0.5; font-size: 11px;">Don't use hot water during
+                                                        <br> consume
+                                                    </p>
+    
+                                                </ol>
+                                            </div>
+                                            <div>
+                                                <div style="margin-left: 50px;">
+                                                    <i style="color: blue; " class="far fa-pen"></i>
+                                                    <span style="color:red;">X</span>
+                                                </div>
+                                                <p
+                                                    style=" text-align: center; background-color: rgb(35, 35, 102);padding: 3px;border-radius: 5px; color: white; font-size: 10px;">
+                                                    After Food</p>
+                                            </div>
+                                        </div>
+    
+    
+                                    </div> -->
+                                </div>
+                                
+
+
+                                </div>
+                        
+
+
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="card p-2" style="height: 472px;">
+                                <h5 style="color: rgb(42, 42, 110); font-weight: bold;">Tests</h5>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div id="patient-test-listitem1" style="width: 150px; height: 25px; border:1px solid black "> 
+                                         
+                                          </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div id="patient-test-listitem2" style="width: 150px; height: 25px; border:1px solid black "> 
+                                            
+                                          </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div id="patient-test-listitem3" style="width: 150px; height: 25px; border:1px solid black "> 
+                                           
+                                          </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div id="patient-test-listitem4" style="width: 150px; height: 25px; border:1px solid black "> 
+                                           
+                                          </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div id="patient-test-listitem5" style="width: 150px; height: 25px; border:1px solid black "> 
+                                           
+                                          </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="d-flex justify-content-">
+                                    <div style="color: rgb(70, 70, 109);">
+                                        <b>Search</b>
+                                    </div>
+
+                                </div>
+                                <div style=" margin: 10px; padding: 5px;" class="card">
+                                    <label class="label"></label>
+                                    <!-- <input type="text" id="patient-issue" list="patient-issue-list" required /> -->
+                                    <select onclick="getTests()" id="patientTestList">
+                                     
+                                    </select>
+
+                                    <!-- <ul class="list-group ">
+                                        <div class="vl "></div>
+                                        <span style="font-size: 13px;">Doctor</span>
+                                        <span style="font-size: 13px;">Dr.Sammy Winchester</span>
+                                        <span style="font-size: 13px;">Cardiologist</span>
+                                    </ul> -->
+                                </div >
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="../javascript/zpj.js"></script>
+    <script src="../javascript/lazy.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous ">
+        </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+        integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script>
+        document.getElementById("third").addEventListener('click', function () {
+            location.href = "../../../Dashboard/template/cmd1.html";
+        });
+        document.getElementById("fourth").addEventListener('click', function () {
+            location.href = "../../view details/Tamplate/Apg.html";
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.lr-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
+        <script>window.LogRocket && window.LogRocket.init('jthrfp/cmd');</script>
+
+</script>
+
+
+</body>
+
+</html>
